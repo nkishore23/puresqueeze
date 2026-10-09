@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PureSqueeze Craft Cold-Pressed Juices - 100% Raw, Unpasteurized, Zero Added Sugar. Fresh morning deliveries across Bengaluru.">
+  <meta name="theme-color" content="#FF6B00">
+  <title>PureSqueeze | Artisan Cold-Pressed Juices &amp; Cleanse Bar</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div class="container announcement-inner">
+      <div class="status-live-indicator">
+        <span class="live-dot"></span>
+        <span id="storeStatusText">Open Now • Indiranagar Hub</span>
+      </div>
+      <div class="batch-countdown">
+        <span>⏰ Next Fresh Batch Pressing in:</span>
+        <strong id="batchCountdownTimer">02h 45m 18s</strong>
+      </div>
+      <div class="announcement-promo">
+        <span class="promo-code-tag">CODE: FRESH15</span>
+        <span class="promo-desc">for 15% off your first cold cleanse!</span>
+      </div>
+      <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I%20would%20like%20to%20know%20today's%20fresh%20juice%20menu." target="_blank" rel="noopener noreferrer" class="announcement-link">
+        Chat on WhatsApp &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= STICKY HEADER & NAVIGATION ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="PureSqueeze Home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+            <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            <path d="M14 21C14 18 16 15 18 12C18 15 20 18 20 21C20 23.2 18.5 25 18 25C17.5 25 14 23.2 14 21Z" fill="#65A30D"/>
+            <path d="M18 4V8M24 7L21 10M12 7L15 10" stroke="#FFFDF9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Pure<span class="text-orange">Squeeze</span></span>
+          <span class="logo-sub">Artisan Cold-Pressed</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu &amp; Drinks</a></li>
+          <li><a href="cleanses.html" class="nav-link">Cleanse Packs</a></li>
+          <li><a href="about.html" class="nav-link">Our Story</a></li>
+          <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+          <li><a href="contact.html" class="nav-link">Hours &amp; Location</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <!-- Audio Chime Toggle -->
+        <button id="soundToggleBtn" class="action-icon-btn" title="Toggle audio feedback" aria-label="Toggle Sound Effects">
+          <span id="soundIcon">🔔</span>
+        </button>
+
+        <!-- WhatsApp Header Button -->
+        <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-header" aria-label="Order on WhatsApp">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2zm0 18.347h-.004a8.31 8.31 0 01-3.668-.86l-.263-.153-2.932.848.847-2.884-.173-.277a8.32 8.32 0 01-1.272-4.405c0-4.6 3.742-8.342 8.342-8.342a8.303 8.303 0 015.897 2.443 8.307 8.307 0 012.445 5.898c0 4.601-3.743 8.342-8.342 8.342zm4.568-6.241c-.25-.125-1.478-.73-1.708-.813-.23-.083-.396-.125-.563.125-.167.25-.646.813-.792.98-.146.166-.292.187-.542.062-.25-.125-1.056-.39-2.011-1.242-.743-.663-1.246-1.482-1.392-1.732-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438.125-.146.167-.25.25-.417.083-.167.042-.313-.021-.438-.063-.125-.563-1.354-.771-1.854-.203-.487-.41-.42-.563-.428l-.479-.009c-.167 0-.438.063-.667.313s-.875.855-.875 2.084 1.104 2.417 1.25 2.605c.146.187 2.17 3.313 5.256 4.646.734.318 1.308.508 1.755.65.738.235 1.41.202 1.942.122.593-.089 1.478-.604 1.687-1.188.208-.583.208-1.083.146-1.188-.063-.104-.23-.167-.48-.292z"/>
+          </svg>
+          <span>WhatsApp Quick Order</span>
+        </a>
+
+        <!-- Cart Trigger Button -->
+        <button id="cartToggleBtn" class="cart-btn" aria-label="View Order Basket">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-2z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 01-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <span class="brand-title">Menu Navigation</span>
+          <button id="mobileDrawerClose" class="drawer-close-btn" aria-label="Close navigation">&times;</button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link active">🏠 Home</a></li>
+          <li><a href="menu.html" class="mobile-nav-link">🥤 Full Drinks Menu</a></li>
+          <li><a href="cleanses.html" class="mobile-nav-link">🌱 Cleanse Programs</a></li>
+          <li><a href="about.html" class="mobile-nav-link">🌿 Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html" class="mobile-nav-link">⭐ Customer Reviews</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">📍 Hours &amp; Location</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I%20would%20like%20to%20order%20cold-pressed%20juices." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-full">
+            Order on WhatsApp (+91 98765 43210)
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>100% Raw • Zero Added Sugar • Bengaluru Same-Day Delivery</span>
+          </div>
+          <h1 class="hero-title">
+            Vibrant Living In Every <span class="highlight-orange">Cold-Pressed</span> Drop.
+          </h1>
+          <p class="hero-subtext">
+            No pasteurization, zero preservatives, zero dilution. Handcrafted daily from organic Indian orchard harvests to infuse your cells with living enzymes.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="menu.html" class="btn btn-primary-hero">
+              <span>Explore Live Menu</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="cleanses.html" class="btn btn-secondary-hero">
+              <span>View Cleanse Packs</span>
+            </a>
+            <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20Please%20send%20me%20today's%20fresh%20cleanse%20and%20juice%20recommendations." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-hero">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+              <span>WhatsApp Order</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">1.5 kg</span>
+              <span class="stat-label">Whole produce per bottle</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">0g</span>
+              <span class="stat-label">Added sugar or syrups</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4.9 ★</span>
+              <span class="stat-label">3,800+ Bengaluru fans</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrapper">
+          <div class="hero-image-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=900&q=85" 
+              alt="Freshly pressed citrus and orange juice with fresh mint and fruit slices" 
+              class="hero-main-img" 
+              loading="eager"
+              onerror="this.onerror=null; this.parentElement.classList.add('fallback-active');"
+            >
+            <div class="hero-fallback-bg" aria-hidden="true">
+              <div class="fallback-juice-graphic">🍊🥤</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-top-right">
+            <span class="badge-icon">🌿</span>
+            <div class="badge-text">
+              <strong>Farm to Glass</strong>
+              <small>Pressed within 48h of harvest</small>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <span class="badge-icon">❄️</span>
+            <div class="badge-text">
+              <strong>Hydraulic Cold Press</strong>
+              <small>Retains 5x live enzymes</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BEST SELLERS SPOTLIGHT ================= -->
+    <section class="section bestsellers-section" id="bestsellers">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Crowd Favorites</span>
+          <h2 class="section-title">Today's Trending Bottles</h2>
+          <p class="section-subtitle">Crafted in small daily batches. Customize size, boosters, or order directly on WhatsApp.</p>
+        </div>
+
+        <div class="bestsellers-grid" id="bestsellersGrid">
+          <!-- Dynamically populated by script.js -->
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="menu.html" class="btn btn-primary-hero">
+            <span>View Complete 8-Drink Catalog</span>
+            &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE JUICE FINDER QUIZ WIZARD ================= -->
+    <section class="section quiz-section" id="quiz">
+      <div class="container">
+        <div class="quiz-card-wrapper">
+          <div class="quiz-header text-center">
+            <span class="section-tag">Interactive Recommender</span>
+            <h2 class="section-title">Find Your Perfect Juice Formula</h2>
+            <p class="section-subtitle">Answer 3 quick questions to discover your personalized cold-pressed elixir match.</p>
+          </div>
+
+          <!-- Step Indicators -->
+          <div class="quiz-steps-indicator">
+            <div class="quiz-step-dot active" data-step="1">1. Primary Goal</div>
+            <div class="quiz-step-line"></div>
+            <div class="quiz-step-dot" data-step="2">2. Flavor Profile</div>
+            <div class="quiz-step-line"></div>
+            <div class="quiz-step-dot" data-step="3">3. Format &amp; Energy</div>
+          </div>
+
+          <!-- Step 1: Goal -->
+          <div class="quiz-step-pane active" id="quizStep1">
+            <h3 class="quiz-question">What is your primary wellness goal today?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" data-goal="detox">
+                <span class="opt-icon">🥬</span>
+                <strong>Deep Detox &amp; Gut Rest</strong>
+                <small>Alkaline greens &amp; celery cleansers</small>
+              </button>
+              <button class="quiz-option-btn" data-goal="energy">
+                <span class="opt-icon">⚡</span>
+                <strong>Sustained Stamina &amp; Cardio</strong>
+                <small>Nitric oxide rich roots &amp; beets</small>
+              </button>
+              <button class="quiz-option-btn" data-goal="immunity">
+                <span class="opt-icon">🛡️</span>
+                <strong>Immunity &amp; Flu Shield</strong>
+                <small>High Vitamin C, raw turmeric &amp; amla</small>
+              </button>
+              <button class="quiz-option-btn" data-goal="glow">
+                <span class="opt-icon">✨</span>
+                <strong>Skin Glow &amp; Recovery</strong>
+                <small>Super berries, acai &amp; hydration</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Flavor -->
+          <div class="quiz-step-pane" id="quizStep2">
+            <h3 class="quiz-question">What flavor profile do you crave?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" data-flavor="citrus">
+                <span class="opt-icon">🍊</span>
+                <strong>Zesty &amp; Refreshing Citrus</strong>
+                <small>Sweet orange, mosambi &amp; mint</small>
+              </button>
+              <button class="quiz-option-btn" data-flavor="earthy">
+                <span class="opt-icon">🥗</span>
+                <strong>Pure Earthy Green &amp; Crisp</strong>
+                <small>Cucumber, celery, apple &amp; greens</small>
+              </button>
+              <button class="quiz-option-btn" data-flavor="tropical">
+                <span class="opt-icon">🥭</span>
+                <strong>Creamy &amp; Tropical Sweet</strong>
+                <small>Alphonso mango, coconut &amp; banana</small>
+              </button>
+              <button class="quiz-option-btn" data-flavor="spicy">
+                <span class="opt-icon">🔥</span>
+                <strong>Fiery &amp; Concentrated Kick</strong>
+                <small>Raw ginger, black pepper &amp; amla</small>
+              </button>
+            </div>
+            <div class="quiz-nav-row">
+              <button class="btn btn-secondary-sm quiz-back-btn" data-back="1">&larr; Back</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Format -->
+          <div class="quiz-step-pane" id="quizStep3">
+            <h3 class="quiz-question">How do you prefer to consume it?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" data-format="bottle">
+                <span class="opt-icon">🥤</span>
+                <strong>Single 350ml Daily Refresher</strong>
+                <small>Perfect morning or mid-day sip</small>
+              </button>
+              <button class="quiz-option-btn" data-format="shot">
+                <span class="opt-icon">⚡</span>
+                <strong>Concentrated 60ml Potent Shot</strong>
+                <small>Rapid 15-minute bioavailable surge</small>
+              </button>
+              <button class="quiz-option-btn" data-format="cleanse">
+                <span class="opt-icon">📦</span>
+                <strong>Full Multi-Bottle Cleanse Pack</strong>
+                <small>Structured 1 to 3 day reset regimen</small>
+              </button>
+            </div>
+            <div class="quiz-nav-row">
+              <button class="btn btn-secondary-sm quiz-back-btn" data-back="2">&larr; Back</button>
+            </div>
+          </div>
+
+          <!-- Result Container -->
+          <div class="quiz-result-pane" id="quizResultPane">
+            <div class="quiz-result-card" id="quizResultCard">
+              <!-- Dynamically generated result -->
+            </div>
+            <div class="text-center quiz-restart-row">
+              <button class="btn btn-secondary-sm" id="quizRestartBtn">🔄 Retake Quiz</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VALUE PROPOSITION / BENEFITS ================= -->
+    <section class="section benefits-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Living Nutrition</span>
+          <h2 class="section-title">The PureSqueeze Difference</h2>
+          <p class="section-subtitle">Crafted without heat, pasteurization, or synthetic additives.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper orange-icon"><span>❄️</span></div>
+            <h3 class="benefit-title">Zero Friction Heat</h3>
+            <p class="benefit-desc">Hydraulic press generates zero blade heat, preserving living enzymes and essential phytonutrients.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper green-icon"><span>🚫</span></div>
+            <h3 class="benefit-title">Zero Added Water/Sugar</h3>
+            <p class="benefit-desc">100% whole fruits and vegetables. Approximately 1.5 kg of fresh produce in every 350ml bottle.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper lime-icon"><span>⚡</span></div>
+            <h3 class="benefit-title">Rapid Cellular Uptake</h3>
+            <p class="benefit-desc">Direct bioavailable nutrient absorption in under 20 minutes without burdening digestion.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper cream-icon"><span>♻️</span></div>
+            <h3 class="benefit-title">₹15 Glass Return Credit</h3>
+            <p class="benefit-desc">Return clean glass bottles upon your next delivery and receive an automatic wallet credit.</p>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="about.html" class="btn btn-secondary-sm">
+            <span>Read Our Complete Farm &amp; Extraction Story</span> &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUICK ORDER / DELIVERY BANNER ================= -->
+    <section class="section" style="padding: 4rem 0; background: var(--color-cream-surface); border-top: 1px solid var(--color-border);">
+      <div class="container text-center">
+        <span class="section-tag">Express Bengaluru Delivery</span>
+        <h2 class="section-title">Ready for Tomorrow Morning's Fresh Batch?</h2>
+        <p class="section-subtitle" style="margin-bottom: 2rem;">Orders placed before 9:00 PM are cold-pressed at 5:00 AM and delivered chilled to your doorstep.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="menu.html" class="btn btn-primary-hero">Order from Live Menu</a>
+          <a href="contact.html" class="btn btn-secondary-hero">View Delivery Zones &amp; Hours</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" width="32" height="32">
+              <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+              <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title text-light">Pure<span class="text-orange">Squeeze</span></span>
+            <span class="logo-sub text-muted">Cold-Pressed Juice Co.</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          100% Raw, Hydraulic Cold-Pressed Juices, Super Smoothies &amp; Vitality Cleanse Programs. Supporting regenerative Indian agriculture.
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">📸</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">📘</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Drinks Menu</a></li>
+          <li><a href="cleanses.html">Cleanse Packages</a></li>
+          <li><a href="about.html">Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html">Customer Reviews</a></li>
+          <li><a href="contact.html">Hours &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Store &amp; Hours</h4>
+        <ul class="footer-links">
+          <li>104, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru</li>
+          <li>Mon–Sat: 6:30 AM – 9:00 PM</li>
+          <li>Sun: 7:00 AM – 8:00 PM</li>
+          <li>Phone: +91 98765 43210</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-heading">Morning Juice Drop</h4>
+        <p class="newsletter-sub">Get notified about seasonal rare fruit drops &amp; weekend cleanse specials.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary-sm">Subscribe</button>
+        </form>
+        <small class="newsletter-privacy">We respect your inbox. 100% spam-free promise.</small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 PureSqueeze Juice Co. All rights reserved. Prices inclusive of applicable GST.</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Store Location</a>
+          <span>•</span>
+          <a href="#">FSSAI Certified #11223344556677</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ADVANCED CART DRAWER ================= -->
+  <aside id="cartDrawer" class="cart-drawer" aria-label="WhatsApp Order Basket" aria-hidden="true">
+    <div class="cart-drawer-inner">
+      <div class="cart-header">
+        <div class="cart-title-box">
+          <span class="cart-icon">🛍️</span>
+          <h3>Your Juice Basket</h3>
+        </div>
+        <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close Basket">&times;</button>
+      </div>
+
+      <div class="delivery-progress-container">
+        <div class="delivery-progress-label">
+          <span id="deliveryProgressText">Add ₹499 more for Free Delivery!</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="deliveryProgressFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList"></div>
+
+      <div class="cart-promo-section">
+        <div class="promo-input-group">
+          <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. FRESH15)">
+          <button id="applyPromoBtn" class="btn btn-secondary-sm">Apply</button>
+        </div>
+        <div id="promoMessage" class="promo-msg"></div>
+      </div>
+
+      <div class="cart-delivery-slot">
+        <label for="deliverySlotSelect">Preferred Delivery Slot:</label>
+        <select id="deliverySlotSelect">
+          <option value="Morning Delivery (7:00 AM – 9:00 AM)">Morning Delivery (7:00 AM – 9:00 AM)</option>
+          <option value="Mid-day Delivery (12:00 PM – 2:00 PM)">Mid-day Delivery (12:00 PM – 2:00 PM)</option>
+          <option value="Evening Delivery (5:00 PM – 7:00 PM)">Evening Delivery (5:00 PM – 7:00 PM)</option>
+          <option value="Immediate Express (within 45 mins)">Immediate Express (within 45 mins)</option>
+        </select>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-breakdown">
+          <div class="summary-line">
+            <span>Item Subtotal:</span>
+            <span id="cartSubtotalText">₹0</span>
+          </div>
+          <div class="summary-line" id="discountRow" style="display: none;">
+            <span>Discount Applied:</span>
+            <span class="text-orange" id="cartDiscountText">-₹0</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery Fee:</span>
+            <span id="cartDeliveryFeeText">₹40</span>
+          </div>
+          <div class="summary-line total-line">
+            <strong>Grand Total:</strong>
+            <strong id="cartGrandTotal">₹0</strong>
+          </div>
+        </div>
+
+        <button id="whatsappCheckoutBtn" class="btn btn-whatsapp-full" disabled>
+          <span>Confirm on WhatsApp</span>
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div id="cartOverlay" class="cart-overlay" aria-hidden="true"></div>
+
+  <!-- ================= DRINK CUSTOMIZER MODAL ================= -->
+  <div id="customizerModal" class="customizer-modal-overlay" aria-hidden="true">
+    <div class="customizer-dialog" role="dialog" aria-modal="true" aria-labelledby="customizerTitle">
+      <button id="customizerCloseBtn" class="modal-close-corner" aria-label="Close dialog">&times;</button>
+      <div class="customizer-content">
+        <div class="customizer-header-pane">
+          <div class="customizer-thumb">
+            <img id="customizerImg" src="" alt="Customizing drink">
+            <div id="customizerThumbFallback" class="thumb-fallback orange-tint">🥤</div>
+          </div>
+          <div class="customizer-meta">
+            <span class="pill-tag" id="customizerTag">Cold-Pressed</span>
+            <h3 id="customizerTitle">Customize Your Squeeze</h3>
+            <p id="customizerDesc">Tailor bottle size, add organic boosters, and adjust natural sweetness.</p>
+          </div>
+        </div>
+
+        <div class="customizer-group">
+          <label class="customizer-group-label">1. Choose Bottle Size</label>
+          <div class="size-options-grid">
+            <label class="size-radio-card">
+              <input type="radio" name="bottleSize" value="350ml" data-addon="0" checked>
+              <div class="size-card-content">
+                <strong>Regular (350ml)</strong>
+                <small>Standard Single Serving</small>
+                <span class="size-price-addon">+₹0</span>
+              </div>
+            </label>
+            <label class="size-radio-card">
+              <input type="radio" name="bottleSize" value="500ml" data-addon="60">
+              <div class="size-card-content">
+                <strong>Jumbo (500ml)</strong>
+                <small>Extra Energy Hydration</small>
+                <span class="size-price-addon">+₹60</span>
+              </div>
+            </label>
+            <label class="size-radio-card">
+              <input type="radio" name="bottleSize" value="4-Pack" data-addon="380">
+              <div class="size-card-content">
+                <strong>4-Pack Box</strong>
+                <small>4 x 350ml (Share with family)</small>
+                <span class="size-price-addon">+₹380</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="customizer-group">
+          <label class="customizer-group-label">2. Add-on Vitality Boosters (Optional)</label>
+          <div class="boosters-checkbox-grid">
+            <label class="booster-check-card">
+              <input type="checkbox" name="booster" value="Extra Ginger Shot (+₹25)" data-price="25">
+              <span>🫚 Extra Cold-Pressed Ginger (+₹25)</span>
+            </label>
+            <label class="booster-check-card">
+              <input type="checkbox" name="booster" value="Soaked Chia Seeds (+₹30)" data-price="30">
+              <span>🫐 Soaked Chia Seeds (+₹30)</span>
+            </label>
+            <label class="booster-check-card">
+              <input type="checkbox" name="booster" value="Wild Amla Shield (+₹35)" data-price="35">
+              <span>🛡️ Wild Amla Extract (+₹35)</span>
+            </label>
+            <label class="booster-check-card">
+              <input type="checkbox" name="booster" value="Plant Pea Protein (+₹50)" data-price="50">
+              <span>💪 Sprouted Pea Protein (+₹50)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="customizer-group">
+          <label class="customizer-group-label">3. Natural Sweetness Note</label>
+          <div class="sweetness-pills">
+            <label class="sweetness-chip">
+              <input type="radio" name="sweetness" value="Pure Raw (No Honey)" checked>
+              <span>Pure Raw (Zero Added)</span>
+            </label>
+            <label class="sweetness-chip">
+              <input type="radio" name="sweetness" value="Drizzle of Wild Forest Honey">
+              <span>Touch of Wild Honey</span>
+            </label>
+            <label class="sweetness-chip">
+              <input type="radio" name="sweetness" value="Extra Mint & Lime Zest">
+              <span>Extra Lime &amp; Spearmint</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="customizer-footer">
+          <div class="customizer-total-box">
+            <span>Total Price:</span>
+            <strong id="customizerLiveTotal">₹159</strong>
+          </div>
+          <button id="addCustomizedToCartBtn" class="btn btn-primary-hero">
+            <span>Add Customized Drink to Basket</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PERSISTENT FLOATING CART BAR ================= -->
+  <div id="floatingCartPill" class="floating-cart-pill" aria-hidden="true">
+    <div class="pill-content">
+      <span class="pill-icon">🛒</span>
+      <span id="floatingCartPillText">0 items in basket • ₹0</span>
+    </div>
+    <button id="floatingCartPillBtn" class="btn btn-pill-order">
+      <span>View &amp; Checkout</span>
+      &rarr;
+    </button>
+  </div>
+
+  <!-- ================= FLOATING STICKY WHATSAPP BUTTON ================= -->
+  <a 
+    href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20fresh%20cold-pressed%20juices." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp-btn" 
+    aria-label="Order on WhatsApp (+91 98765 43210)"
+    title="Instant WhatsApp Order"
+  >
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="30" height="30" aria-hidden="true">
+      <path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+  </a>
+
+  <!-- ================= TOAST NOTIFICATION CONTAINER ================= -->
+  <div id="toastNotification" class="toast-box" role="status" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

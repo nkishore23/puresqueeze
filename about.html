@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the PureSqueeze story: hydraulic cold-press technology, regenerative Indian farm partnerships, and zero-waste glass bottle recycling in Bengaluru.">
+  <meta name="theme-color" content="#FF6B00">
+  <title>Our Story &amp; Farms | PureSqueeze Artisan Cold-Pressed</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div class="container announcement-inner">
+      <div class="status-live-indicator">
+        <span class="live-dot"></span>
+        <span id="storeStatusText">Open Now • Indiranagar Hub</span>
+      </div>
+      <div class="batch-countdown">
+        <span>⏰ Next Fresh Batch Pressing in:</span>
+        <strong id="batchCountdownTimer">02h 45m 18s</strong>
+      </div>
+      <div class="announcement-promo">
+        <span class="promo-code-tag">FARM FRESH</span>
+        <span class="promo-desc">All produce harvested within 48h of cold-pressing!</span>
+      </div>
+      <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20learn%20more%20about%20your%20farm%20partners." target="_blank" rel="noopener noreferrer" class="announcement-link">
+        Chat with Us &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= STICKY HEADER & NAVIGATION ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="PureSqueeze Home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+            <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            <path d="M14 21C14 18 16 15 18 12C18 15 20 18 20 21C20 23.2 18.5 25 18 25C17.5 25 14 23.2 14 21Z" fill="#65A30D"/>
+            <path d="M18 4V8M24 7L21 10M12 7L15 10" stroke="#FFFDF9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Pure<span class="text-orange">Squeeze</span></span>
+          <span class="logo-sub">Artisan Cold-Pressed</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu &amp; Drinks</a></li>
+          <li><a href="cleanses.html" class="nav-link">Cleanse Packs</a></li>
+          <li><a href="about.html" class="nav-link active">Our Story</a></li>
+          <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+          <li><a href="contact.html" class="nav-link">Hours &amp; Location</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button id="soundToggleBtn" class="action-icon-btn" title="Toggle audio feedback" aria-label="Toggle Sound Effects">
+          <span id="soundIcon">🔔</span>
+        </button>
+
+        <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20cold-pressed%20juices." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-header">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+          <span>WhatsApp Quick Order</span>
+        </a>
+
+        <button id="cartToggleBtn" class="cart-btn" aria-label="View Order Basket">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-2z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 01-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <span class="brand-title">Menu Navigation</span>
+          <button id="mobileDrawerClose" class="drawer-close-btn" aria-label="Close navigation">&times;</button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">🏠 Home</a></li>
+          <li><a href="menu.html" class="mobile-nav-link">🥤 Full Drinks Menu</a></li>
+          <li><a href="cleanses.html" class="mobile-nav-link">🌱 Cleanse Programs</a></li>
+          <li><a href="about.html" class="mobile-nav-link active">🌿 Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html" class="mobile-nav-link">⭐ Customer Reviews</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">📍 Hours &amp; Location</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I%20would%20like%20to%20order%20cold-pressed%20juices." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-full">
+            Order on WhatsApp (+91 98765 43210)
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Our Story</span>
+      </nav>
+      <h1 class="page-banner-title">Rooted in Organic Indian Agriculture</h1>
+      <p class="page-banner-sub">
+        Crafting raw botanical medicine from living Indian soil. No pasteurization, zero concentrates, and an unwavering commitment to regenerative farming.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <!-- ================= THE FOUNDING STORY ================= -->
+    <section class="section about-section">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-image-card">
+            <img 
+              src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" 
+              alt="Fresh Indian organic orchard fruits and greens" 
+              loading="lazy"
+              onerror="this.onerror=null; this.parentElement.classList.add('fallback-active');"
+            >
+            <div class="about-fallback-box">🌿🍋</div>
+          </div>
+          <div class="about-quote-badge">
+            <p>"Food is medicine when it flows directly from living soil into your glass."</p>
+            <small>— Chef Ananya Sharma, Founder</small>
+          </div>
+        </div>
+
+        <div class="about-text-content">
+          <span class="section-tag">Our Origin</span>
+          <h2 class="section-title">Why We Refused to Bottle Sugar Water</h2>
+          <p class="about-para">
+            In 2021, our founder Chef Ananya noticed a troubling reality in Bengaluru supermarkets: bottles labeled "100% Pure" were actually heated to 85°C (destroying live vitamins), blended with pectin, diluted with tap water, and preserved for months on warehouse shelves.
+          </p>
+          <p class="about-para">
+            PureSqueeze was born in an Indiranagar test kitchen with a single commercial hydraulic press. Our pledge: we press in small batches every morning at 5:00 AM, bottle in sterilized glass, and deliver chilled within hours.
+          </p>
+
+          <div class="about-checkmarks">
+            <div class="checkmark-item">
+              <span class="check-bullet">✓</span>
+              <div>
+                <strong>100% Raw &amp; Living</strong>
+                <p>Retaining active digestive enzymes, chlorophyll, and phytonutrients.</p>
+              </div>
+            </div>
+            <div class="checkmark-item">
+              <span class="check-bullet">✓</span>
+              <div>
+                <strong>4°C Unbroken Cold Chain</strong>
+                <p>Never room-temperature. Transported in thermal insulated cooler bags.</p>
+              </div>
+            </div>
+            <div class="checkmark-item">
+              <span class="check-bullet">✓</span>
+              <div>
+                <strong>Zero Synthetic Additives</strong>
+                <p>No added refined sugars, zero flavor emulsifiers, zero preservatives.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HYDRAULIC PRESS VS CENTRIFUGAL COMPARISON ================= -->
+    <section class="section comparison-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Scientific Truth</span>
+          <h2 class="section-title">Hydraulic Press vs Centrifugal Juicers</h2>
+          <p class="section-subtitle">Why traditional spinning blenders and pasteurized boxes fall far short.</p>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Factor</th>
+                <th class="highlight-col">PureSqueeze Cold-Pressed</th>
+                <th>Standard Juice Bar (Centrifugal)</th>
+                <th>Supermarket Boxed Juice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Extraction Method</strong></td>
+                <td class="highlight-col">15,000 lbs slow hydraulic crush</td>
+                <td>High-speed spinning metal blades</td>
+                <td>Reconstituted chemical concentrate</td>
+              </tr>
+              <tr>
+                <td><strong>Heat Exposure</strong></td>
+                <td class="highlight-col">0°C heat generated (Cold process)</td>
+                <td>Blades heat up to 45°C (Oxidation)</td>
+                <td>Heated to 85°C+ (Thermal kill)</td>
+              </tr>
+              <tr>
+                <td><strong>Enzyme Activity</strong></td>
+                <td class="highlight-col">100% active living enzymes</td>
+                <td>Partially degraded by heat</td>
+                <td>Zero active enzymes (Dead food)</td>
+              </tr>
+              <tr>
+                <td><strong>Added Sugar / Water</strong></td>
+                <td class="highlight-col">0% added water, 0g sugar</td>
+                <td>Frequently diluted with ice/sugar</td>
+                <td>High-fructose syrups &amp; acidifiers</td>
+              </tr>
+              <tr>
+                <td><strong>Shelf Life</strong></td>
+                <td class="highlight-col">3 to 5 days (Raw freshness)</td>
+                <td>Must consume within 30 minutes</td>
+                <td>6 to 12 months (Heavy preservatives)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FARM PARTNERS ACROSS INDIA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Traceable Origins</span>
+          <h2 class="section-title">Our Certified Farm Partners</h2>
+          <p class="section-subtitle">We bypass middlemen and source directly from smallholder regenerative orchards.</p>
+        </div>
+
+        <div class="farms-grid">
+          <div class="farm-card">
+            <div class="farm-icon">🍊</div>
+            <h3 class="farm-title">Vidarbha Citrus Co-op</h3>
+            <span class="farm-produce">Nagpur, Maharashtra</span>
+            <p class="farm-desc">Sun-drenched, mineral-rich black cotton soil produces India's sweetest, highest-brix Nagpur oranges and Mosambi.</p>
+          </div>
+
+          <div class="farm-card">
+            <div class="farm-icon">🥭</div>
+            <h3 class="farm-title">Ratnagiri Coastal Groves</h3>
+            <span class="farm-produce">Konkan, Maharashtra</span>
+            <p class="farm-desc">GI-tagged organic Alphonso mangoes, naturally tree-ripened without chemical calcium carbide ripening agents.</p>
+          </div>
+
+          <div class="farm-card">
+            <div class="farm-icon">🍎</div>
+            <h3 class="farm-title">Kinnaur Valley Orchards</h3>
+            <span class="farm-produce">Himachal Pradesh</span>
+            <p class="farm-desc">Crisp, crisp alpine apples irrigated with glacial runoff water, delivering exceptional antioxidants and natural sweetness.</p>
+          </div>
+
+          <div class="farm-card">
+            <div class="farm-icon">🥬</div>
+            <h3 class="farm-title">Sahyadri Bio-Farms</h3>
+            <span class="farm-produce">Nashik &amp; Bengaluru Rural</span>
+            <p class="farm-desc">Hydroponic spinach, celery stalks, and wild gooseberries (Amla) harvested at 4:00 AM daily for morning extraction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ZERO WASTE & GLASS RETURN PROGRAM ================= -->
+    <section class="section" style="background: var(--color-cream-surface); border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="about-grid" style="align-items: center;">
+          <div>
+            <span class="section-tag">Circularity in Action</span>
+            <h2 class="section-title">Zero-Waste Commitment</h2>
+            <p class="about-para">
+              Juice bars generate mountains of single-use plastic bottles and discarded organic waste. We designed PureSqueeze to be entirely regenerative from day one:
+            </p>
+            <div class="about-checkmarks" style="margin-top: 1rem;">
+              <div class="checkmark-item">
+                <span class="check-bullet">♻️</span>
+                <div>
+                  <strong>₹15 Glass Return Credit</strong>
+                  <p>Hand over your washed bottles to our delivery team and get instant credit applied to your next delivery.</p>
+                </div>
+              </div>
+              <div class="checkmark-item">
+                <span class="check-bullet">🌱</span>
+                <div>
+                  <strong>100% Composted Organic Pulp</strong>
+                  <p>Over 400 kg of vegetable pulp is returned weekly to local organic farms in Hoskote for soil enrichment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 3rem 2rem; box-shadow: var(--shadow-card);">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🍶✨</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--color-text-dark); margin-bottom: 0.5rem;">Join the Refill Circle</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">Over 18,000 glass bottles kept out of Bengaluru landfills this year alone.</p>
+            <a href="menu.html" class="btn btn-primary-hero">Order in Returnable Glass</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" width="32" height="32">
+              <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+              <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title text-light">Pure<span class="text-orange">Squeeze</span></span>
+            <span class="logo-sub text-muted">Cold-Pressed Juice Co.</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          100% Raw, Hydraulic Cold-Pressed Juices, Super Smoothies &amp; Vitality Cleanse Programs. Supporting regenerative Indian agriculture.
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">📸</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">📘</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Drinks Menu</a></li>
+          <li><a href="cleanses.html">Cleanse Packages</a></li>
+          <li><a href="about.html">Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html">Customer Reviews</a></li>
+          <li><a href="contact.html">Hours &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Store &amp; Hours</h4>
+        <ul class="footer-links">
+          <li>104, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru</li>
+          <li>Mon–Sat: 6:30 AM – 9:00 PM</li>
+          <li>Sun: 7:00 AM – 8:00 PM</li>
+          <li>Phone: +91 98765 43210</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-heading">Morning Juice Drop</h4>
+        <p class="newsletter-sub">Get notified about seasonal rare fruit drops &amp; weekend cleanse specials.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary-sm">Subscribe</button>
+        </form>
+        <small class="newsletter-privacy">We respect your inbox. 100% spam-free promise.</small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 PureSqueeze Juice Co. All rights reserved. Prices inclusive of applicable GST.</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Store Location</a>
+          <span>•</span>
+          <a href="#">FSSAI Certified #11223344556677</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ADVANCED CART DRAWER ================= -->
+  <aside id="cartDrawer" class="cart-drawer" aria-label="WhatsApp Order Basket" aria-hidden="true">
+    <div class="cart-drawer-inner">
+      <div class="cart-header">
+        <div class="cart-title-box">
+          <span class="cart-icon">🛍️</span>
+          <h3>Your Juice Basket</h3>
+        </div>
+        <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close Basket">&times;</button>
+      </div>
+
+      <div class="delivery-progress-container">
+        <div class="delivery-progress-label">
+          <span id="deliveryProgressText">Add ₹499 more for Free Delivery!</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="deliveryProgressFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList"></div>
+
+      <div class="cart-promo-section">
+        <div class="promo-input-group">
+          <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. FRESH15)">
+          <button id="applyPromoBtn" class="btn btn-secondary-sm">Apply</button>
+        </div>
+        <div id="promoMessage" class="promo-msg"></div>
+      </div>
+
+      <div class="cart-delivery-slot">
+        <label for="deliverySlotSelect">Preferred Delivery Slot:</label>
+        <select id="deliverySlotSelect">
+          <option value="Morning Delivery (7:00 AM – 9:00 AM)">Morning Delivery (7:00 AM – 9:00 AM)</option>
+          <option value="Mid-day Delivery (12:00 PM – 2:00 PM)">Mid-day Delivery (12:00 PM – 2:00 PM)</option>
+          <option value="Evening Delivery (5:00 PM – 7:00 PM)">Evening Delivery (5:00 PM – 7:00 PM)</option>
+          <option value="Immediate Express (within 45 mins)">Immediate Express (within 45 mins)</option>
+        </select>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-breakdown">
+          <div class="summary-line">
+            <span>Item Subtotal:</span>
+            <span id="cartSubtotalText">₹0</span>
+          </div>
+          <div class="summary-line" id="discountRow" style="display: none;">
+            <span>Discount Applied:</span>
+            <span class="text-orange" id="cartDiscountText">-₹0</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery Fee:</span>
+            <span id="cartDeliveryFeeText">₹40</span>
+          </div>
+          <div class="summary-line total-line">
+            <strong>Grand Total:</strong>
+            <strong id="cartGrandTotal">₹0</strong>
+          </div>
+        </div>
+
+        <button id="whatsappCheckoutBtn" class="btn btn-whatsapp-full" disabled>
+          <span>Confirm on WhatsApp</span>
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div id="cartOverlay" class="cart-overlay" aria-hidden="true"></div>
+
+  <!-- ================= FLOATING CART PILL & WHATSAPP ================= -->
+  <div id="floatingCartPill" class="floating-cart-pill" aria-hidden="true">
+    <div class="pill-content">
+      <span class="pill-icon">🛒</span>
+      <span id="floatingCartPillText">0 items in basket • ₹0</span>
+    </div>
+    <button id="floatingCartPillBtn" class="btn btn-pill-order">
+      <span>View &amp; Checkout</span>
+      &rarr;
+    </button>
+  </div>
+
+  <a 
+    href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20know%20more%20about%20your%20story%20and%20produce." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp-btn" 
+    aria-label="Order on WhatsApp (+91 98765 43210)"
+    title="Instant WhatsApp Order"
+  >
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="30" height="30" aria-hidden="true">
+      <path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+  </a>
+
+  <div id="toastNotification" class="toast-box" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

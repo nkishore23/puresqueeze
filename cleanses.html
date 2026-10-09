@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nutritional Cold-Pressed Juice Cleanse Programs by PureSqueeze. 1-Day, 3-Day, and 5-Day resets with printed daily consumption schedules and free Bengaluru delivery.">
+  <meta name="theme-color" content="#FF6B00">
+  <title>Cleanse Programs &amp; Protocols | PureSqueeze Juice Co.</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div class="container announcement-inner">
+      <div class="status-live-indicator">
+        <span class="live-dot"></span>
+        <span id="storeStatusText">Open Now • Indiranagar Hub</span>
+      </div>
+      <div class="batch-countdown">
+        <span>⏰ Next Fresh Batch Pressing in:</span>
+        <strong id="batchCountdownTimer">02h 45m 18s</strong>
+      </div>
+      <div class="announcement-promo">
+        <span class="promo-code-tag">CLEANSE PROMO</span>
+        <span class="promo-desc">Free insulated cooler bag on all 3-Day &amp; 5-Day packs!</span>
+      </div>
+      <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20consult%20a%20nutritionist%20about%20cleanses." target="_blank" rel="noopener noreferrer" class="announcement-link">
+        Nutritionist Chat &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= STICKY HEADER & NAVIGATION ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="PureSqueeze Home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+            <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            <path d="M14 21C14 18 16 15 18 12C18 15 20 18 20 21C20 23.2 18.5 25 18 25C17.5 25 14 23.2 14 21Z" fill="#65A30D"/>
+            <path d="M18 4V8M24 7L21 10M12 7L15 10" stroke="#FFFDF9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Pure<span class="text-orange">Squeeze</span></span>
+          <span class="logo-sub">Artisan Cold-Pressed</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu &amp; Drinks</a></li>
+          <li><a href="cleanses.html" class="nav-link active">Cleanse Packs</a></li>
+          <li><a href="about.html" class="nav-link">Our Story</a></li>
+          <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+          <li><a href="contact.html" class="nav-link">Hours &amp; Location</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button id="soundToggleBtn" class="action-icon-btn" title="Toggle audio feedback" aria-label="Toggle Sound Effects">
+          <span id="soundIcon">🔔</span>
+        </button>
+
+        <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I%20would%20like%20to%20order%20a%20juice%20cleanse." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-header">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+          <span>WhatsApp Quick Order</span>
+        </a>
+
+        <button id="cartToggleBtn" class="cart-btn" aria-label="View Order Basket">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-2z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 01-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <span class="brand-title">Menu Navigation</span>
+          <button id="mobileDrawerClose" class="drawer-close-btn" aria-label="Close navigation">&times;</button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">🏠 Home</a></li>
+          <li><a href="menu.html" class="mobile-nav-link">🥤 Full Drinks Menu</a></li>
+          <li><a href="cleanses.html" class="mobile-nav-link active">🌱 Cleanse Programs</a></li>
+          <li><a href="about.html" class="mobile-nav-link">🌿 Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html" class="mobile-nav-link">⭐ Customer Reviews</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">📍 Hours &amp; Location</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I%20would%20like%20to%20order%20cold-pressed%20juices." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-full">
+            Order on WhatsApp (+91 98765 43210)
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Cleanse Programs</span>
+      </nav>
+      <h1 class="page-banner-title">Signature Juice Cleanse Programs</h1>
+      <p class="page-banner-sub">
+        Nutritionally balanced, whole-plant protocols designed to alleviate bloating, reset digestive enzymes, and deliver sustained clarity.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <!-- ================= CLEANSE PLANS GRID ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cleanse-plans-grid">
+          
+          <!-- Plan 1: 1-Day Quick Reset -->
+          <article class="cleanse-plan-card">
+            <span class="plan-tier-name">Beginner Friendly</span>
+            <h2 class="plan-title">1-Day Quick Reset</h2>
+            <div class="plan-price-block">
+              <span class="plan-price-num">₹799</span>
+              <span class="plan-price-label">/ complete pack</span>
+            </div>
+            <p class="section-subtitle" style="font-size: 0.925rem; margin-bottom: 1.5rem;">
+              Ideal after a weekend of rich food or as a gentle introduction to intermittent liquid nourishment.
+            </p>
+            <ul class="plan-features-list">
+              <li><span>✓</span> 6 x 350ml cold-pressed juices</li>
+              <li><span>✓</span> 1 morning Fiery Ginger &amp; Amla shot</li>
+              <li><span>✓</span> Printed consumption schedule</li>
+              <li><span>✓</span> Pre &amp; Post Cleanse digital food guide</li>
+              <li><span>✓</span> Reusable thermal cooler bag included</li>
+            </ul>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <button class="btn btn-add-cart btn-quick-add" data-id="7" style="padding: 0.85rem; font-size: 0.95rem;">
+                + Add 1-Day Pack to Basket
+              </button>
+              <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20the%201-Day%20Quick%20Reset%20Pack%20(₹799)." target="_blank" rel="noopener noreferrer" class="btn btn-wa-quick" style="text-align: center;">
+                Order on WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 2: 3-Day Deep Reboot (Featured) -->
+          <article class="cleanse-plan-card featured-plan">
+            <span class="plan-ribbon">Most Popular</span>
+            <span class="plan-tier-name">Deep Metabolic Rest</span>
+            <h2 class="plan-title">3-Day Deep Reboot</h2>
+            <div class="plan-price-block">
+              <span class="plan-price-num">₹2,199</span>
+              <span class="plan-price-label">/ complete pack</span>
+            </div>
+            <p class="section-subtitle" style="font-size: 0.925rem; margin-bottom: 1.5rem;">
+              Our best-selling program to clear mental fog, shed water weight, and infuse organs with bioavailable antioxidants.
+            </p>
+            <ul class="plan-features-list">
+              <li><span>✓</span> 18 x 350ml raw cold-pressed bottles</li>
+              <li><span>✓</span> 3 daily concentrated immunity booster shots</li>
+              <li><span>✓</span> Alkaline greens + evening nut milks</li>
+              <li><span>✓</span> Free Bengaluru doorstep cold delivery</li>
+              <li><span>✓</span> Daily 1-on-1 WhatsApp nutritionist check-in</li>
+            </ul>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <button class="btn btn-primary-hero btn-quick-add" data-id="8" style="padding: 0.85rem; font-size: 0.95rem;">
+                + Add 3-Day Reboot to Basket
+              </button>
+              <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20the%203-Day%20Deep%20Reboot%20Cleanse%20(₹2,199)." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-hero" style="font-size: 0.9rem; padding: 0.75rem;">
+                Instant WhatsApp Order
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 3: 5-Day Master Cleanse -->
+          <article class="cleanse-plan-card">
+            <span class="plan-tier-name">Intensive Protocol</span>
+            <h2 class="plan-title">5-Day Total Transformation</h2>
+            <div class="plan-price-block">
+              <span class="plan-price-num">₹3,499</span>
+              <span class="plan-price-label">/ complete pack</span>
+            </div>
+            <p class="section-subtitle" style="font-size: 0.925rem; margin-bottom: 1.5rem;">
+              Comprehensive full-system reset formulated for experienced cleansers seeking total digestive renewal.
+            </p>
+            <ul class="plan-features-list">
+              <li><span>✓</span> 30 x 350ml low-glycemic juices</li>
+              <li><span>✓</span> 5 raw turmeric &amp; amla elixir shots</li>
+              <li><span>✓</span> Shipped in 2 fresh batches to ensure freshness</li>
+              <li><span>✓</span> Full ₹75 bottle return credit value</li>
+              <li><span>✓</span> Post-cleanse meal transition planner</li>
+            </ul>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20the%205-Day%20Total%20Transformation%20Cleanse%20(₹3,499)." target="_blank" rel="noopener noreferrer" class="btn btn-primary-hero" style="padding: 0.85rem; font-size: 0.95rem; text-align: center;">
+                Order 5-Day via WhatsApp
+              </a>
+              <button class="btn btn-secondary-sm" onclick="showToast('Please consult our nutritionist on WhatsApp for 5-day customized blends!', '🌿')">
+                Consult on WhatsApp
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DAILY CLEANSE SCHEDULE TIMELINE ================= -->
+    <section class="section cleanse-timeline-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Daily Protocol</span>
+          <h2 class="section-title">Your Typical Cleanse Day</h2>
+          <p class="section-subtitle">Specially timed at 2.5 hour intervals so you never experience hunger or energy dips.</p>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="timeline-step-card">
+            <span class="step-time">8:00 AM</span>
+            <div class="step-drink-icon">🥬</div>
+            <h3 class="step-drink-name">Green Goddess</h3>
+            <p class="step-drink-purpose">Alkalizes gut pH and kickstarts digestive enzymes.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <span class="step-time">10:30 AM</span>
+            <div class="step-drink-icon">🍊</div>
+            <h3 class="step-drink-name">Orange Zest</h3>
+            <p class="step-drink-purpose">Bioavailable vitamin C and natural electrolyte lift.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <span class="step-time">1:00 PM</span>
+            <div class="step-drink-icon">🥗</div>
+            <h3 class="step-drink-name">Deep Green</h3>
+            <p class="step-drink-purpose">Low glycemic leafy greens with high chlorophyll content.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <span class="step-time">3:30 PM</span>
+            <div class="step-drink-icon">⚡</div>
+            <h3 class="step-drink-name">Amla Booster</h3>
+            <p class="step-drink-purpose">Fiery ginger kick to eliminate afternoon sluggishness.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <span class="step-time">6:00 PM</span>
+            <div class="step-drink-icon">🍎</div>
+            <h3 class="step-drink-name">Ruby Beet</h3>
+            <p class="step-drink-purpose">Dietary nitrates for circulation and liver detoxification.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <span class="step-time">8:30 PM</span>
+            <div class="step-drink-icon">🥛</div>
+            <h3 class="step-drink-name">Spiced Nut Milk</h3>
+            <p class="step-drink-purpose">House almond milk with nutmeg to promote deep REM sleep.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUIZ WIZARD ================= -->
+    <section class="section quiz-section" id="quiz">
+      <div class="container">
+        <div class="quiz-card-wrapper">
+          <div class="quiz-header text-center">
+            <span class="section-tag">Cleanse Recommender</span>
+            <h2 class="section-title">Not Sure Which Cleanse Fits You?</h2>
+            <p class="section-subtitle">Take our 3-step assessment to find your optimal protocol.</p>
+          </div>
+
+          <div class="quiz-steps-indicator">
+            <div class="quiz-step-dot active" data-step="1">1. Primary Goal</div>
+            <div class="quiz-step-line"></div>
+            <div class="quiz-step-dot" data-step="2">2. Flavor Profile</div>
+            <div class="quiz-step-line"></div>
+            <div class="quiz-step-dot" data-step="3">3. Format &amp; Energy</div>
+          </div>
+
+          <div class="quiz-step-pane active" id="quizStep1">
+            <h3 class="quiz-question">What is your primary wellness goal today?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" data-goal="detox">
+                <span class="opt-icon">🥬</span>
+                <strong>Deep Detox &amp; Gut Rest</strong>
+                <small>Alkaline greens &amp; celery cleansers</small>
+              </button>
+              <button class="quiz-option-btn" data-goal="energy">
+                <span class="opt-icon">⚡</span>
+                <strong>Sustained Stamina &amp; Cardio</strong>
+                <small>Nitric oxide rich roots &amp; beets</small>
+              </button>
+              <button class="quiz-option-btn" data-goal="immunity">
+                <span class="opt-icon">🛡️</span>
+                <strong>Immunity &amp; Flu Shield</strong>
+                <small>High Vitamin C, raw turmeric &amp; amla</small>
+              </button>
+              <button class="quiz-option-btn" data-goal="glow">
+                <span class="opt-icon">✨</span>
+                <strong>Skin Glow &amp; Recovery</strong>
+                <small>Super berries, acai &amp; hydration</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-step-pane" id="quizStep2">
+            <h3 class="quiz-question">What flavor profile do you crave?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" data-flavor="citrus">
+                <span class="opt-icon">🍊</span>
+                <strong>Zesty &amp; Refreshing Citrus</strong>
+                <small>Sweet orange, mosambi &amp; mint</small>
+              </button>
+              <button class="quiz-option-btn" data-flavor="earthy">
+                <span class="opt-icon">🥗</span>
+                <strong>Pure Earthy Green &amp; Crisp</strong>
+                <small>Cucumber, celery, apple &amp; greens</small>
+              </button>
+              <button class="quiz-option-btn" data-flavor="tropical">
+                <span class="opt-icon">🥭</span>
+                <strong>Creamy &amp; Tropical Sweet</strong>
+                <small>Alphonso mango, coconut &amp; banana</small>
+              </button>
+              <button class="quiz-option-btn" data-flavor="spicy">
+                <span class="opt-icon">🔥</span>
+                <strong>Fiery &amp; Concentrated Kick</strong>
+                <small>Raw ginger, black pepper &amp; amla</small>
+              </button>
+            </div>
+            <div class="quiz-nav-row">
+              <button class="btn btn-secondary-sm quiz-back-btn" data-back="1">&larr; Back</button>
+            </div>
+          </div>
+
+          <div class="quiz-step-pane" id="quizStep3">
+            <h3 class="quiz-question">How do you prefer to consume it?</h3>
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn" data-format="bottle">
+                <span class="opt-icon">🥤</span>
+                <strong>Single 350ml Daily Refresher</strong>
+                <small>Perfect morning or mid-day sip</small>
+              </button>
+              <button class="quiz-option-btn" data-format="shot">
+                <span class="opt-icon">⚡</span>
+                <strong>Concentrated 60ml Potent Shot</strong>
+                <small>Rapid 15-minute bioavailable surge</small>
+              </button>
+              <button class="quiz-option-btn" data-format="cleanse">
+                <span class="opt-icon">📦</span>
+                <strong>Full Multi-Bottle Cleanse Pack</strong>
+                <small>Structured 1 to 3 day reset regimen</small>
+              </button>
+            </div>
+            <div class="quiz-nav-row">
+              <button class="btn btn-secondary-sm quiz-back-btn" data-back="2">&larr; Back</button>
+            </div>
+          </div>
+
+          <div class="quiz-result-pane" id="quizResultPane">
+            <div class="quiz-result-card" id="quizResultCard"></div>
+            <div class="text-center quiz-restart-row">
+              <button class="btn btn-secondary-sm" id="quizRestartBtn">🔄 Retake Quiz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" width="32" height="32">
+              <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+              <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title text-light">Pure<span class="text-orange">Squeeze</span></span>
+            <span class="logo-sub text-muted">Cold-Pressed Juice Co.</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          100% Raw, Hydraulic Cold-Pressed Juices, Super Smoothies &amp; Vitality Cleanse Programs. Supporting regenerative Indian agriculture.
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">📸</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">📘</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Drinks Menu</a></li>
+          <li><a href="cleanses.html">Cleanse Packages</a></li>
+          <li><a href="about.html">Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html">Customer Reviews</a></li>
+          <li><a href="contact.html">Hours &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Store &amp; Hours</h4>
+        <ul class="footer-links">
+          <li>104, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru</li>
+          <li>Mon–Sat: 6:30 AM – 9:00 PM</li>
+          <li>Sun: 7:00 AM – 8:00 PM</li>
+          <li>Phone: +91 98765 43210</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-heading">Morning Juice Drop</h4>
+        <p class="newsletter-sub">Get notified about seasonal rare fruit drops &amp; weekend cleanse specials.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary-sm">Subscribe</button>
+        </form>
+        <small class="newsletter-privacy">We respect your inbox. 100% spam-free promise.</small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 PureSqueeze Juice Co. All rights reserved. Prices inclusive of applicable GST.</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Store Location</a>
+          <span>•</span>
+          <a href="#">FSSAI Certified #11223344556677</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ADVANCED CART DRAWER ================= -->
+  <aside id="cartDrawer" class="cart-drawer" aria-label="WhatsApp Order Basket" aria-hidden="true">
+    <div class="cart-drawer-inner">
+      <div class="cart-header">
+        <div class="cart-title-box">
+          <span class="cart-icon">🛍️</span>
+          <h3>Your Juice Basket</h3>
+        </div>
+        <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close Basket">&times;</button>
+      </div>
+
+      <div class="delivery-progress-container">
+        <div class="delivery-progress-label">
+          <span id="deliveryProgressText">Add ₹499 more for Free Delivery!</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="deliveryProgressFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList"></div>
+
+      <div class="cart-promo-section">
+        <div class="promo-input-group">
+          <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. FRESH15)">
+          <button id="applyPromoBtn" class="btn btn-secondary-sm">Apply</button>
+        </div>
+        <div id="promoMessage" class="promo-msg"></div>
+      </div>
+
+      <div class="cart-delivery-slot">
+        <label for="deliverySlotSelect">Preferred Delivery Slot:</label>
+        <select id="deliverySlotSelect">
+          <option value="Morning Delivery (7:00 AM – 9:00 AM)">Morning Delivery (7:00 AM – 9:00 AM)</option>
+          <option value="Mid-day Delivery (12:00 PM – 2:00 PM)">Mid-day Delivery (12:00 PM – 2:00 PM)</option>
+          <option value="Evening Delivery (5:00 PM – 7:00 PM)">Evening Delivery (5:00 PM – 7:00 PM)</option>
+          <option value="Immediate Express (within 45 mins)">Immediate Express (within 45 mins)</option>
+        </select>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-breakdown">
+          <div class="summary-line">
+            <span>Item Subtotal:</span>
+            <span id="cartSubtotalText">₹0</span>
+          </div>
+          <div class="summary-line" id="discountRow" style="display: none;">
+            <span>Discount Applied:</span>
+            <span class="text-orange" id="cartDiscountText">-₹0</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery Fee:</span>
+            <span id="cartDeliveryFeeText">₹40</span>
+          </div>
+          <div class="summary-line total-line">
+            <strong>Grand Total:</strong>
+            <strong id="cartGrandTotal">₹0</strong>
+          </div>
+        </div>
+
+        <button id="whatsappCheckoutBtn" class="btn btn-whatsapp-full" disabled>
+          <span>Confirm on WhatsApp</span>
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div id="cartOverlay" class="cart-overlay" aria-hidden="true"></div>
+
+  <!-- ================= FLOATING CART PILL & WHATSAPP ================= -->
+  <div id="floatingCartPill" class="floating-cart-pill" aria-hidden="true">
+    <div class="pill-content">
+      <span class="pill-icon">🛒</span>
+      <span id="floatingCartPillText">0 items in basket • ₹0</span>
+    </div>
+    <button id="floatingCartPillBtn" class="btn btn-pill-order">
+      <span>View &amp; Checkout</span>
+      &rarr;
+    </button>
+  </div>
+
+  <a 
+    href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20a%20juice%20cleanse%20pack." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp-btn" 
+    aria-label="Order on WhatsApp (+91 98765 43210)"
+    title="Instant WhatsApp Order"
+  >
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="30" height="30" aria-hidden="true">
+      <path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+  </a>
+
+  <div id="toastNotification" class="toast-box" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

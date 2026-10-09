@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verified customer reviews and feedback for PureSqueeze Cold-Pressed Juices in Bengaluru. Read transformation stories and leave your own feedback.">
+  <meta name="theme-color" content="#FF6B00">
+  <title>Customer Reviews &amp; Stories | PureSqueeze Juice Co.</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div class="container announcement-inner">
+      <div class="status-live-indicator">
+        <span class="live-dot"></span>
+        <span id="storeStatusText">Open Now • Indiranagar Hub</span>
+      </div>
+      <div class="batch-countdown">
+        <span>⏰ Next Fresh Batch Pressing in:</span>
+        <strong id="batchCountdownTimer">02h 45m 18s</strong>
+      </div>
+      <div class="announcement-promo">
+        <span class="promo-code-tag">4.9 ★ RATING</span>
+        <span class="promo-desc">from over 3,800+ Bengaluru wellness enthusiasts!</span>
+      </div>
+      <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20cold-pressed%20juices." target="_blank" rel="noopener noreferrer" class="announcement-link">
+        Chat on WhatsApp &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= STICKY HEADER & NAVIGATION ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="PureSqueeze Home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+            <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            <path d="M14 21C14 18 16 15 18 12C18 15 20 18 20 21C20 23.2 18.5 25 18 25C17.5 25 14 23.2 14 21Z" fill="#65A30D"/>
+            <path d="M18 4V8M24 7L21 10M12 7L15 10" stroke="#FFFDF9" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Pure<span class="text-orange">Squeeze</span></span>
+          <span class="logo-sub">Artisan Cold-Pressed</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu &amp; Drinks</a></li>
+          <li><a href="cleanses.html" class="nav-link">Cleanse Packs</a></li>
+          <li><a href="about.html" class="nav-link">Our Story</a></li>
+          <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+          <li><a href="contact.html" class="nav-link">Hours &amp; Location</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button id="soundToggleBtn" class="action-icon-btn" title="Toggle audio feedback" aria-label="Toggle Sound Effects">
+          <span id="soundIcon">🔔</span>
+        </button>
+
+        <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20cold-pressed%20juices." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-header">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+          <span>WhatsApp Quick Order</span>
+        </a>
+
+        <button id="cartToggleBtn" class="cart-btn" aria-label="View Order Basket">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-2z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 01-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <span class="brand-title">Menu Navigation</span>
+          <button id="mobileDrawerClose" class="drawer-close-btn" aria-label="Close navigation">&times;</button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">🏠 Home</a></li>
+          <li><a href="menu.html" class="mobile-nav-link">🥤 Full Drinks Menu</a></li>
+          <li><a href="cleanses.html" class="mobile-nav-link">🌱 Cleanse Programs</a></li>
+          <li><a href="about.html" class="mobile-nav-link">🌿 Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html" class="mobile-nav-link active">⭐ Customer Reviews</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">📍 Hours &amp; Location</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I%20would%20like%20to%20order%20cold-pressed%20juices." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-full">
+            Order on WhatsApp (+91 98765 43210)
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Customer Reviews</span>
+      </nav>
+      <h1 class="page-banner-title">Real Words From Real Sippers</h1>
+      <p class="page-banner-sub">
+        Discover how our hydraulic cold-pressed juices and cleanses nourish Bengaluru's runners, working parents, yoga practitioners, and daily vitality seekers.
+      </p>
+    </div>
+  </section>
+
+  <main class="section reviews-section" id="reviews">
+    <div class="container">
+      
+      <!-- ================= RATING SUMMARY METRIC CARD ================= -->
+      <div class="reviews-summary-card">
+        <div class="summary-score-box">
+          <div class="score-num">4.9</div>
+          <div class="score-stars">★★★★★</div>
+          <div class="score-meta">Based on 3,820+ verified orders</div>
+        </div>
+
+        <div class="rating-breakdown-bars">
+          <div class="bar-row">
+            <span>5 Stars</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 92%;"></div></div>
+            <span>92%</span>
+          </div>
+          <div class="bar-row">
+            <span>4 Stars</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 7%;"></div></div>
+            <span>7%</span>
+          </div>
+          <div class="bar-row">
+            <span>3 Stars</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 1%;"></div></div>
+            <span>1%</span>
+          </div>
+        </div>
+
+        <div class="summary-cta-box">
+          <strong style="display: block; font-size: 1.1rem; color: var(--color-text-dark); margin-bottom: 0.25rem;">98% Would Recommend</strong>
+          <small style="color: var(--color-text-light); display: block; margin-bottom: 1rem;">To friends and family</small>
+          <button id="openReviewModalBtn" class="btn btn-primary-sm">✍️ Write a Review</button>
+        </div>
+      </div>
+
+      <!-- ================= CATEGORY FILTER BAR ================= -->
+      <div class="reviews-filter-bar">
+        <button class="review-filter-btn active" data-review="all">All Stories (4)</button>
+        <button class="review-filter-btn" data-review="cleanse">Cleanse Programs</button>
+        <button class="review-filter-btn" data-review="daily">Daily Sippers</button>
+        <button class="review-filter-btn" data-review="energy">Fitness &amp; Cardio</button>
+      </div>
+
+      <!-- ================= DYNAMIC REVIEWS GRID ================= -->
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- Prompt Banner -->
+      <div class="text-center" style="margin-top: 3rem;">
+        <div class="add-review-prompt">
+          <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-text-dark); margin-bottom: 0.5rem;">Have You Experienced PureSqueeze?</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 1.25rem;">We value honesty and transparent community reflections.</p>
+          <button class="btn btn-primary-hero" onclick="document.getElementById('openReviewModalBtn').click()">
+            Share Your Experience Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= LEAVE A REVIEW MODAL ================= -->
+  <div id="reviewModal" class="customizer-modal-overlay" aria-hidden="true">
+    <div class="customizer-dialog review-dialog" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle">
+      <button id="reviewModalCloseBtn" class="modal-close-corner" aria-label="Close dialog">&times;</button>
+      <div class="customizer-content">
+        <h3 id="reviewModalTitle" style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--color-text-dark);">Share Your PureSqueeze Experience</h3>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.25rem;">Your review will appear immediately in the live feed.</p>
+
+        <form id="newReviewForm" class="new-review-form">
+          <div class="form-group">
+            <label for="reviewAuthor">Your Name &amp; Area</label>
+            <input type="text" id="reviewAuthor" placeholder="e.g. Pooja Hegde (Indiranagar)" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reviewCategory">Experience Category</label>
+            <select id="reviewCategory">
+              <option value="cleanse">Cleanse Programs</option>
+              <option value="daily">Daily Sippers</option>
+              <option value="energy">Fitness &amp; Cardio</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reviewStars">Star Rating</label>
+            <select id="reviewStars">
+              <option value="5">★★★★★ (5 Stars - Outstanding)</option>
+              <option value="4">★★★★☆ (4 Stars - Very Good)</option>
+              <option value="3">★★★☆☆ (3 Stars - Average)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reviewComment">Your Feedback</label>
+            <textarea id="reviewComment" rows="3" placeholder="Tell us about the freshness, taste, and packaging..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary-hero" style="width: 100%;">Submit Live Review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" width="32" height="32">
+              <circle cx="18" cy="18" r="16" fill="#FF6B00"/>
+              <path d="M18 7C18 7 10 14 10 21C10 25.4 13.6 29 18 29C22.4 29 26 25.4 26 21C26 14 18 7 18 7Z" fill="#FFFDF9"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title text-light">Pure<span class="text-orange">Squeeze</span></span>
+            <span class="logo-sub text-muted">Cold-Pressed Juice Co.</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          100% Raw, Hydraulic Cold-Pressed Juices, Super Smoothies &amp; Vitality Cleanse Programs. Supporting regenerative Indian agriculture.
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">📸</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">📘</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Drinks Menu</a></li>
+          <li><a href="cleanses.html">Cleanse Packages</a></li>
+          <li><a href="about.html">Our Story &amp; Farms</a></li>
+          <li><a href="reviews.html">Customer Reviews</a></li>
+          <li><a href="contact.html">Hours &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Store &amp; Hours</h4>
+        <ul class="footer-links">
+          <li>104, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru</li>
+          <li>Mon–Sat: 6:30 AM – 9:00 PM</li>
+          <li>Sun: 7:00 AM – 8:00 PM</li>
+          <li>Phone: +91 98765 43210</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-heading">Morning Juice Drop</h4>
+        <p class="newsletter-sub">Get notified about seasonal rare fruit drops &amp; weekend cleanse specials.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary-sm">Subscribe</button>
+        </form>
+        <small class="newsletter-privacy">We respect your inbox. 100% spam-free promise.</small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 PureSqueeze Juice Co. All rights reserved. Prices inclusive of applicable GST.</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Store Location</a>
+          <span>•</span>
+          <a href="#">FSSAI Certified #11223344556677</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ADVANCED CART DRAWER ================= -->
+  <aside id="cartDrawer" class="cart-drawer" aria-label="WhatsApp Order Basket" aria-hidden="true">
+    <div class="cart-drawer-inner">
+      <div class="cart-header">
+        <div class="cart-title-box">
+          <span class="cart-icon">🛍️</span>
+          <h3>Your Juice Basket</h3>
+        </div>
+        <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close Basket">&times;</button>
+      </div>
+
+      <div class="delivery-progress-container">
+        <div class="delivery-progress-label">
+          <span id="deliveryProgressText">Add ₹499 more for Free Delivery!</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="deliveryProgressFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList"></div>
+
+      <div class="cart-promo-section">
+        <div class="promo-input-group">
+          <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. FRESH15)">
+          <button id="applyPromoBtn" class="btn btn-secondary-sm">Apply</button>
+        </div>
+        <div id="promoMessage" class="promo-msg"></div>
+      </div>
+
+      <div class="cart-delivery-slot">
+        <label for="deliverySlotSelect">Preferred Delivery Slot:</label>
+        <select id="deliverySlotSelect">
+          <option value="Morning Delivery (7:00 AM – 9:00 AM)">Morning Delivery (7:00 AM – 9:00 AM)</option>
+          <option value="Mid-day Delivery (12:00 PM – 2:00 PM)">Mid-day Delivery (12:00 PM – 2:00 PM)</option>
+          <option value="Evening Delivery (5:00 PM – 7:00 PM)">Evening Delivery (5:00 PM – 7:00 PM)</option>
+          <option value="Immediate Express (within 45 mins)">Immediate Express (within 45 mins)</option>
+        </select>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-breakdown">
+          <div class="summary-line">
+            <span>Item Subtotal:</span>
+            <span id="cartSubtotalText">₹0</span>
+          </div>
+          <div class="summary-line" id="discountRow" style="display: none;">
+            <span>Discount Applied:</span>
+            <span class="text-orange" id="cartDiscountText">-₹0</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery Fee:</span>
+            <span id="cartDeliveryFeeText">₹40</span>
+          </div>
+          <div class="summary-line total-line">
+            <strong>Grand Total:</strong>
+            <strong id="cartGrandTotal">₹0</strong>
+          </div>
+        </div>
+
+        <button id="whatsappCheckoutBtn" class="btn btn-whatsapp-full" disabled>
+          <span>Confirm on WhatsApp</span>
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div id="cartOverlay" class="cart-overlay" aria-hidden="true"></div>
+
+  <!-- ================= FLOATING CART PILL & WHATSAPP ================= -->
+  <div id="floatingCartPill" class="floating-cart-pill" aria-hidden="true">
+    <div class="pill-content">
+      <span class="pill-icon">🛒</span>
+      <span id="floatingCartPillText">0 items in basket • ₹0</span>
+    </div>
+    <button id="floatingCartPillBtn" class="btn btn-pill-order">
+      <span>View &amp; Checkout</span>
+      &rarr;
+    </button>
+  </div>
+
+  <a 
+    href="https://wa.me/919876543210?text=Hi%20PureSqueeze!%20I'd%20like%20to%20order%20cold-pressed%20juices." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp-btn" 
+    aria-label="Order on WhatsApp (+91 98765 43210)"
+    title="Instant WhatsApp Order"
+  >
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="30" height="30" aria-hidden="true">
+      <path d="M12.031 2C6.51 2 2.015 6.495 2.015 12.016c0 1.83.498 3.619 1.442 5.187L2 22l4.943-1.428a9.98 9.98 0 004.088 1.045h.004c5.52 0 10.015-4.495 10.015-10.016A10.02 10.02 0 0012.031 2z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+  </a>
+
+  <div id="toastNotification" class="toast-box" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
